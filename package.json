@@ -1,26 +1,21 @@
 {
   "name": "tactos-front",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  },
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/TactOS/tactos-front#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TactOS/tactos-front.git"
   },
-  "author": "",
-  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/TactOS/tactos-front/issues"
   },
-  "homepage": "https://github.com/TactOS/tactos-front#readme",
-  "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.2.0"
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "lint:js": "eslint 'src/**/*.js'",
+    "fix:js": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
     "material-ui": "^0.20.0",
@@ -29,5 +24,18 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "parcel-bundler": "^1.2.0",
+    "prettier": "^1.9.2"
   }
 }
