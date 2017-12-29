@@ -74,9 +74,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Card key="HowToUse" style={{ marginTop: 80, marginRight: 12, marginBottom: 12, marginLeft: 12 }}>
-          <CardHeader title="How to Use TactOS." titleStyle={{ fontSize: '22px' }} />
+        <Card key="README" style={{ marginTop: 80, marginRight: 12, marginBottom: 12, marginLeft: 12 }}>
+          <CardHeader title="Gentoo - Compile = TactOS!" titleStyle={{ fontSize: '22px' }} />
           <CardText style={{ fontSize: '20px' }}>
+            How to Use TactOS.<br />
             $ git clone https://github.com/tactos/tact<br />
             $ cd tact<br />
             # ./tact package_name<br />
