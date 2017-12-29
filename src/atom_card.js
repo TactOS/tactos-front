@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card'
 import Chip from 'material-ui/Chip'
 import RaisedButton from 'material-ui/RaisedButton'
-import { red200, red500, red900, green500, blue300, blue900, yellow800 } from 'material-ui/styles/colors'
+import { red200, red500, red900, green500, blue300, blue900, yellow800, grey700 } from 'material-ui/styles/colors'
 import Avatar from 'material-ui/Avatar'
 
 export default class CardAtom extends React.Component {
@@ -43,7 +43,7 @@ export default class CardAtom extends React.Component {
         case 'compiling':
           return yellow800
         default:
-          return red500
+          return grey700
       }
     }
     let statusColor = f()
