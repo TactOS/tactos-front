@@ -4,6 +4,7 @@ import Chip from 'material-ui/Chip'
 import RaisedButton from 'material-ui/RaisedButton'
 import { red200, red500, red900, green500, blue300, blue900, yellow800, grey700 } from 'material-ui/styles/colors'
 import Avatar from 'material-ui/Avatar'
+import DeviceAccessTime from 'material-ui/svg-icons/device/access-time'
 
 export default class CardAtom extends React.Component {
   render() {
@@ -48,6 +49,9 @@ export default class CardAtom extends React.Component {
     }
     let statusColor = f()
 
+    let elapsed = this.props.atoms.end - this.props.atoms.start
+    let elapsedTime = (Math.floor(elapsed / 3600) ? Math.floor(elapsed / 3600) + " hr ": "") + (Math.floor((elapsed % 3600) / 60) ? Math.floor((elapsed % 3600) / 60) + " min ": "") + ((elapsed % 3600) % 60) + " sec"
+
     return (
       <Card style={{ borderLeft: '5px solid ' + statusColor, margin: 12 }}>
         <CardHeader
@@ -65,6 +69,7 @@ export default class CardAtom extends React.Component {
         />
         <CardText>
           {this.props.atoms.id}
+          {(()=>{if (!isNaN(elapsed)){ return <div><DeviceAccessTime style={{marginLeft: 27}}/><div>{elapsedTime}</div></div>}})()}
           <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             {Object.keys(this.props.atoms.use).map(key => {
               if (this.props.atoms.use[key]) {
